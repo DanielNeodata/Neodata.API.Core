@@ -1,0 +1,15 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/neoAI/bin
+/neoAI/obj
+/neodataEcosystem/.vs
+/neodataEcosystem/neodataEcosystem/bin
+/neoTools/bin
+/neoTools/obj
+/neoTransactions/.vs
+/neoTransactions/neoTransactions/.vs/neoTransactions
+/neoTransactions/neoTransactions/bin/Debug/net7.0
+/neoTransactions/neoTransactions/obj
