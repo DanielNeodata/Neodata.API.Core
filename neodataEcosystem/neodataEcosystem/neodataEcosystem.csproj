@@ -1,0 +1,189 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <StartupObject></StartupObject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>90a91418-899b-4e74-bc87-fe4b6758a7b2</UserSecretsId>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <Content Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Neodata\.nuget\packages\select.htmltopdf.netcore\22.2.0\contentFiles\any\any\Select.Html.dep" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\configDatabases.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\configEmailing.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\configServers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\configTokens.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FreeSpire.Barcode" Version="6.6.0" />
+    <PackageReference Include="FreeSpire.PDF" Version="8.6.0" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="24.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.Private.ServiceModel" Version="4.10.3" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\afipwsfeclient-master\AfipWsfeClient.csproj" />
+    <ProjectReference Include="..\..\neoAI\neoAI.csproj" />
+    <ProjectReference Include="..\..\neoTools\neoTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.AspNetCore.Mvc" />
+    <Using Include="neodataEcosystem.Data" />
+    <Using Include="neodataEcosystem.Interfaces" />
+    <Using Include="neodataEcosystem.Rules" />
+    <Using Include="neodataEcosystem.SuperClasses" />
+    <Using Include="neoTools" />
+    <Using Include="Newtonsoft.Json" />
+    <Using Include="System.Data" />
+    <Using Include="System.Data.SqlClient" />
+    <Using Include="System.Reflection" />
+    <Using Include="System.Text" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Application\Config\Certificates\Afip\20176342502\RUBEN-NEODATA-FE_33a900700e238230.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20176342502\ruben.csr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20176342502\ruben.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20176342502\ruben.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20207347966\cert_key.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20207347966\daniel.csr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20207347966\daniel.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20207347966\daniel.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20207347966\PRODUCCION 20207347966_45e0d1838ed53006.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20214784069\sergio.csr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20214784069\sergio.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\20214784069\sergio.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\30712162712\NeodataCTPBA2_605f9b3c8bc15cab.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\30712162712\sanisidro.csr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\30712162712\sanisidro.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\30712162712\sanisidro.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\afip.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\afip.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\afip.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\Daniel Fernandez_12d16fe484a0ee09.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\Afip\danielafip.csr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\appcrypto.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\CredipazBase64.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\NeodataBase64.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Application\Config\Certificates\openssl.cnf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\css\neoInterfaces\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\html\neomobile.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\html\thanks.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\thanks.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\NEOAUTHENTICATION.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\neoInterfaces\DB.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\neoInterfaces\EVENTS.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\neoInterfaces\NMF.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\neoInterfaces\TOOLS.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\NEOVIDEO-jvideo1.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\NEOVIDEO.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\js\WRTC.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Select.Html.dep">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+</Project>

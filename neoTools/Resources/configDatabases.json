@@ -1,0 +1,51 @@
+[
+  {
+    "key": "neo_authentication",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_authentication"
+  },
+  {
+    "key": "neo_interfaces",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_interfaces"
+  },
+  {
+    "key": "neo_logs",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_logs"
+  },
+  {
+    "key": "neo_rpa",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_rpa"
+  },
+  {
+    "key": "neo_signature",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_signature"
+  },
+  {
+    "key": "neo_transactions",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_transactions"
+  },
+  {
+    "key": "neo_video",
+    "server": "localhost",
+    "username": "sa",
+    "password": "08Z5il37",
+    "database": "neo_video"
+  }
+]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Video</title>
+	<meta http-equiv="Content-Language" content="es-ar" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js" integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src='https://jmeet.gruponeodata.com/external_api.js'></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body style="background-color:rgb(250, 250, 250);" class='btn-full'>
+	<div id='meet' class='m-0 p-0' style='width:100vw;height:100vh;display:none;'></div>
+	<button class='btn btn-block btn-raised btn-danger btn-full d-none btn-hd' style='position:absolute;top:20px;left:0px;z-index:99999;'>Click para ver en HD</button>
+	<div class="divInfo text-center" style='position:absolute;top:2px;left:0px;z-index:9999999;width:100%;color:cyan;font-size:0.7rem;'></div>
+</body>
+</html>
+<script>
+	$(document).ready(function () {
+		var today = new Date();
+		$.getScript("../js/NEOVIDEO.js?" + today.toDateString()).done(function (script, textStatus) {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			var _data = urlParams.get('data');
+			_data = _NEOVIDEO.b64_to_utf8(_data);
+			_data = JSON.parse(_data);
+			_NEOVIDEO._SERVER = _data.server;
+			_NEOVIDEO._id_application = _data.id_application;
+			_NEOVIDEO._username = _data.username;
+			_NEOVIDEO._password = _data.password;
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.target = "#meet";
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.caller = _data.creator;
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.roomname = "NEOVIDEO";
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.fullname = " ";
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.alias = " ";
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.width = "100vw";
+			_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.height = "100vh";
+
+			/*Defines behavior when close video*/
+			if (!$.isFunction(_NEOVIDEO.onDisconnect)) {
+				if (_data.close_url != "") {
+					_NEOVIDEO.onDisconnect = function () { window.location = _data.close_url; };
+				} else {
+					_NEOVIDEO.onDisconnect = function () { window.history.back(); };
+				}
+			}
+
+			_NEOVIDEO.onJoinOpenSession(_data.id).then(function (data) {
+				$('[name ^= "jitsiConferenceFrame"]').css({ "height": _NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.height, "width": _NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.width });
+				$(_NEOVIDEO._CONFIG_INIT_VIDEO_DEFAULTS.target).fadeIn("slow");
+			});
+
+			$("body").off("click", ".btn-full").on("click", ".btn-full", function () {
+				try {
+					var el = document.querySelector('[name^="jitsiConferenceFrame"]');
+					//var el = document.getElementById("jitsiConferenceFrame0");
+					el.requestFullScreen || el.webkitRequestFullScreen(el.ALLOW_KEYBOARD_INPUT) || el.mozRequestFullScreen || el.msRequestFullScreen;
+				} catch (rex) { }
+				$(".btn-hd").hide();
+			});
+			setTimeout(function () { $(".btn-full").hide().removeClass("d-none").fadeIn("fast"); }, 2000);
+
+			setTimeout(function () {
+				navigator.mediaDevices.getUserMedia({ audio: true, video: true }).catch(error => { alert("Ud. no tiene habilitados los permisos de cámara y/o micrófono para nuestro sitio. \n Por favor habilítelos cuando su teléfono lo solicite. \n Si no lo hace, deberá acceder a su navegador y remover el bloqueo para nuestro sitio."); });
+			}, 2000);
+		});
+	});
+</script>

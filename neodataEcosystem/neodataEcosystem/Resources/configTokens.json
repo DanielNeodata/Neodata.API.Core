@@ -1,0 +1,14 @@
+[
+  {
+    "key": "default",
+    "seconds": 600,
+    "type": "token_transaction",
+    "ignore": true
+  },
+  {
+    "key": "ethernal",
+    "seconds": -1,
+    "type": "token_ethernal",
+    "ignore": true
+  }
+]

@@ -1,0 +1,5263 @@
+[
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AfipController",
+    "Method": "CreditNote",
+    "RelativePath": "neoafip.v1/CreditNote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IsProdEnvironment",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CUIT",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Records",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VoucherType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesPoint",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "InvoiceCreationDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InvoicePayDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concept",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DocumentType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DocumentNumber",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountNet",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountIva",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountTotal",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceDateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceDateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrencyChange",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrencyId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalVoucherType",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalInvoiceNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalInvoiceSalesPoint",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalDocumentNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AfipController",
+    "Method": "Invoice",
+    "RelativePath": "neoafip.v1/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IsProdEnvironment",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CUIT",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Records",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VoucherType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesPoint",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "InvoiceCreationDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InvoicePayDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concept",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DocumentType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DocumentNumber",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountNet",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountIva",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountTotal",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceDateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceDateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrencyChange",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrencyId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalVoucherType",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalInvoiceNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalInvoiceSalesPoint",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OriginalDocumentNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AfipController",
+    "Method": "Status",
+    "RelativePath": "neoafip.v1/Status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "Authenticate",
+    "RelativePath": "neoauthentication.v1/Authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.Interfaces.outAuthentication",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "DestroyToken",
+    "RelativePath": "neoauthentication.v1/DestroyToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "Monitoring",
+    "RelativePath": "neoauthentication.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "State",
+    "RelativePath": "neoauthentication.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "TypeUsers",
+    "RelativePath": "neoauthentication.v1/TypeUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "VerifyTokenEthernal",
+    "RelativePath": "neoauthentication.v1/VerifyTokenEthernal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.AuthenticationController",
+    "Method": "VerifyTokenSingleUser",
+    "RelativePath": "neoauthentication.v1/VerifyTokenSingleUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.BridgeController",
+    "Method": "Loyal",
+    "RelativePath": "neobridge.v1/Loyal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_profile",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.BridgeController",
+    "Method": "Status",
+    "RelativePath": "neobridge.v1/Status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.InterfacesController",
+    "Method": "Monitoring",
+    "RelativePath": "neointerfaces.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.InterfacesController",
+    "Method": "Search",
+    "RelativePath": "neointerfaces.v1/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.InterfacesController",
+    "Method": "State",
+    "RelativePath": "neointerfaces.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.InterfacesController",
+    "Method": "TypeStatus",
+    "RelativePath": "neointerfaces.v1/TypeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.LogController",
+    "Method": "Create",
+    "RelativePath": "neologs.v1/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_type_log",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Action",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trace",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Val_rel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Field_rel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Command_rel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.LogController",
+    "Method": "Monitoring",
+    "RelativePath": "neologs.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.LogController",
+    "Method": "State",
+    "RelativePath": "neologs.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.LogController",
+    "Method": "TypeLogs",
+    "RelativePath": "neologs.v1/TypeLogs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "AddItemforTranning",
+    "RelativePath": "neoneural.v1/AddItemforTranning",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "AddItemResponseforTranning",
+    "RelativePath": "neoneural.v1/AddItemResponseforTranning",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "Projects",
+    "RelativePath": "neoneural.v1/Projects",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "Questions",
+    "RelativePath": "neoneural.v1/Questions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "ResetProject",
+    "RelativePath": "neoneural.v1/ResetProject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "Resolve",
+    "RelativePath": "neoneural.v1/Resolve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "State",
+    "RelativePath": "neoneural.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "SynapsesMatrix",
+    "RelativePath": "neoneural.v1/SynapsesMatrix",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.NeuralController",
+    "Method": "Trainning",
+    "RelativePath": "neoneural.v1/Trainning",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_project",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_question",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Base64RawData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Captured",
+    "RelativePath": "neorpa.v1/Captured",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_robot",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_thread",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_step",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Parameter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Monitoring",
+    "RelativePath": "neorpa.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Robots",
+    "RelativePath": "neorpa.v1/Robots",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Start",
+    "RelativePath": "neorpa.v1/Start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_profile",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_robot",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "HideNavigator",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Data",
+        "Type": "neodataEcosystem.Interfaces.inRpaStartData[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "State",
+    "RelativePath": "neorpa.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Status",
+    "RelativePath": "neorpa.v1/Status",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_robot",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_thread",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_step",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Parameter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Stop",
+    "RelativePath": "neorpa.v1/Stop",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_robot",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_thread",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_step",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Parameter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "TypeEvaluables",
+    "RelativePath": "neorpa.v1/TypeEvaluables",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "TypeSteps",
+    "RelativePath": "neorpa.v1/TypeSteps",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.RpaController",
+    "Method": "Values",
+    "RelativePath": "neorpa.v1/Values",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_robot",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_thread",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_step",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Parameter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ScheduleController",
+    "Method": "Create",
+    "RelativePath": "neoschedule.v1/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Details",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "External_response",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_frequency",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_1",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_2",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_3",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_4",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_5",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_6",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_frequency_7",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Latitude",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user_assigned",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ScheduleController",
+    "Method": "Search",
+    "RelativePath": "neoschedule.v1/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ScheduleController",
+    "Method": "State",
+    "RelativePath": "neoschedule.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ScheduleController",
+    "Method": "TypeStatus",
+    "RelativePath": "neoschedule.v1/TypeFrequency",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "Certificate",
+    "RelativePath": "neosignature.v1/Certificate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Val_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_document",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "Create",
+    "RelativePath": "neosignature.v1/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_type_document",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mime_type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data_additional",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mime_type_additional",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lat",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lng",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Altitude",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Speed",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Referer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custom_message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Modifier",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Val_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Y",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageToAlter",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "Monitoring",
+    "RelativePath": "neosignature.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "RawData",
+    "RelativePath": "neosignature.v1/RawData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Val_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_document",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "RawDataAdditional",
+    "RelativePath": "neosignature.v1/RawDataAdditional",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Val_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name_key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_document",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "Search",
+    "RelativePath": "neosignature.v1/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "State",
+    "RelativePath": "neosignature.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "TypeDocuments",
+    "RelativePath": "neosignature.v1/TypeDocuments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.SignaturesController",
+    "Method": "TypeStatus",
+    "RelativePath": "neosignature.v1/TypeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ToolsController",
+    "Method": "BarCode",
+    "RelativePath": "neotools.v1/BarCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "b64",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ToolsController",
+    "Method": "CountPages",
+    "RelativePath": "neotools.v1/CountPages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Base64",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filename",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ToolsController",
+    "Method": "CreateBarCode",
+    "RelativePath": "neotools.v1/CreateBarCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Text",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ToolsController",
+    "Method": "CreateQR",
+    "RelativePath": "neotools.v1/CreateQR",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Url",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.ToolsController",
+    "Method": "QR",
+    "RelativePath": "neotools.v1/QR",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "b64",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "Create",
+    "RelativePath": "neotransactions.v1/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mime_type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "CreateNoSign",
+    "RelativePath": "neotransactions.v1/CreateNoSign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_type_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_type_transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mime_type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "Monitoring",
+    "RelativePath": "neotransactions.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "Search",
+    "RelativePath": "neotransactions.v1/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "State",
+    "RelativePath": "neotransactions.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.TransactionsController",
+    "Method": "TypeStatus",
+    "RelativePath": "neotransactions.v1/TypeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "CleanOrphanSessions",
+    "RelativePath": "neovideo.v1/CleanOrphanSessions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tech",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Live",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "CloseOpenSession",
+    "RelativePath": "neovideo.v1/CloseOpenSession",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "CreateNewVideoRoom",
+    "RelativePath": "neovideo.v1/CreateNewVideoRoom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tech",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Live",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "DeleteDataInClient",
+    "RelativePath": "neovideo.v1/DeleteDataInClient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "GetRelatedData",
+    "RelativePath": "neovideo.v1/GetRelatedData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "GetWrtcOfferAnswer",
+    "RelativePath": "neovideo.v1/GetWrtcOfferAnswer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "JoinOpenSession",
+    "RelativePath": "neovideo.v1/JoinOpenSession",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "ListAvailableLiveStreaming",
+    "RelativePath": "neovideo.v1/ListAvailableLiveStreaming",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "ListAvailableVideoRooms",
+    "RelativePath": "neovideo.v1/ListAvailableVideoRooms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "Monitoring",
+    "RelativePath": "neovideo.v1/Monitoring",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "ReceiveRelatedData",
+    "RelativePath": "neovideo.v1/ReceiveRelatedData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Remove",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "Search",
+    "RelativePath": "neovideo.v1/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date_to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Transaction",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_Type_Frequency",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExternalId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "SendRelatedData",
+    "RelativePath": "neovideo.v1/SendRelatedData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_item",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_data",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "State",
+    "RelativePath": "neovideo.v1/State",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "TypeStatus",
+    "RelativePath": "neovideo.v1/TypeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Where",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "outBaseAnyResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "UpdateVideoGuest",
+    "RelativePath": "neovideo.v1/UpdateVideoGuest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "UpdateVideoHost",
+    "RelativePath": "neovideo.v1/UpdateVideoHost",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reOpen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "neodataEcosystem.Controllers.VideoController",
+    "Method": "UpdateWrtcAnswer",
+    "RelativePath": "neovideo.v1/UpdateWrtcAnswer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id_transaction",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Raw_answer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_application",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id_user",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "neodataEcosystem.SuperClasses.outBaseAnyTable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neodataEcosystem", "neodataEcosystem\neodataEcosystem\neodataEcosystem.csproj", "{F07B2900-F112-4EE1-85BC-112A99E07DD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neoTools", "neoTools\neoTools.csproj", "{F252FCDF-5C78-4ACD-9323-F7213A8BE970}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfipWsfeClient", "afipwsfeclient-master\AfipWsfeClient.csproj", "{A336C953-9F4E-4767-ADCF-E0FAF6DDDC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neoAI", "neoAI\neoAI.csproj", "{9F9CD325-30DB-4225-A865-2A46FA8FBA7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F07B2900-F112-4EE1-85BC-112A99E07DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07B2900-F112-4EE1-85BC-112A99E07DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07B2900-F112-4EE1-85BC-112A99E07DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07B2900-F112-4EE1-85BC-112A99E07DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F252FCDF-5C78-4ACD-9323-F7213A8BE970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F252FCDF-5C78-4ACD-9323-F7213A8BE970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F252FCDF-5C78-4ACD-9323-F7213A8BE970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F252FCDF-5C78-4ACD-9323-F7213A8BE970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A336C953-9F4E-4767-ADCF-E0FAF6DDDC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A336C953-9F4E-4767-ADCF-E0FAF6DDDC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A336C953-9F4E-4767-ADCF-E0FAF6DDDC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A336C953-9F4E-4767-ADCF-E0FAF6DDDC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9CD325-30DB-4225-A865-2A46FA8FBA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9CD325-30DB-4225-A865-2A46FA8FBA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9CD325-30DB-4225-A865-2A46FA8FBA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9CD325-30DB-4225-A865-2A46FA8FBA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5E4A388-0122-42AF-A2A3-FA2B24EBB479}
+	EndGlobalSection
+EndGlobal
