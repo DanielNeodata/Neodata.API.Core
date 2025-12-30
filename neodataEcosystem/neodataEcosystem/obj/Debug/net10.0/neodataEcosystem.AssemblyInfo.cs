@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("neodataEcosystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cf41b1ecdfe2eabc29fe0bb38975751ac8705d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f16ad2b9969e5bc5c7b05f90952a6acccf936d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("neodataEcosystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("neodataEcosystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
