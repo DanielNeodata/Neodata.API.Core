@@ -333,7 +333,7 @@ namespace neodataEcosystem.Data
 					PdfPageBase page = pdf.Pages[_params.PageToAlter - 1];
 					try
 					{
-						page.Canvas.DrawImage(image, _params.X, _params.Y, image.Width, image.Height);
+						page.Canvas.DrawImage(image, _params.X, (_params.Y-20), image.Width, image.Height);
 					}
 					catch (Exception ex) { }
 
@@ -341,7 +341,7 @@ namespace neodataEcosystem.Data
 					PdfImage imageQR = PdfImage.FromImage(CreateQrCode(_params));
 					try
 					{
-						page.Canvas.DrawImage(imageQR, _params.X + image.Width, _params.Y, imageQR.Width / 2, imageQR.Height / 2);
+						page.Canvas.DrawImage(imageQR, (_params.X + image.Width + 10), _params.Y, imageQR.Width / 2, imageQR.Height / 2);
 					}
 					catch (Exception ex) { }
 
