@@ -250,7 +250,7 @@ namespace neodataEcosystem.Data
 			settings.QRCodeDataMode = QRCodeDataMode.AlphaNumber;
 			settings.X = 1.0f;
 			settings.QRCodeECL = QRCodeECL.H;
-			string url = _configServers.Servers["NeodataEcosystem"] + "/Certificate?";
+			string url = (_configServers.Servers["NeodataEcosystem"].url + "/Certificate?");
 			url += "id_application=" + _params.Id_application.ToString();
 			url += "&id_user=" + _params.Id_user.ToString();
 			url += "&token=" + _Token.GenerateToken(_params.Id_user, "", _params.Id_application, -1, "neodataEcosystem.gruponeodata.com", "neodataEcosystem.gruponeodata.com");
