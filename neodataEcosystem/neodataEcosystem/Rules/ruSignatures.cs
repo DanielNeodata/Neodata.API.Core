@@ -146,7 +146,7 @@ namespace neodataEcosystem.Rules
 					/*Build PDF Certificate*/
 					if (_response.Records.Count() == 0) { throw new Exception(""); }
 
-					System.Drawing.Image imageQrCode = _da.CreateQrCode(new inSignatures { Id_application = _params.Id_application, Id_user = _params.Id_user });
+					System.Drawing.Image imageQrCode = _da.CreateQrCode(new inSignatures { Id=_params.Id, Id_application = _params.Id_application, Id_user = _params.Id_user });
 
 					ms = new MemoryStream();
 					imageQrCode.Save(ms, ImageFormat.Png);
@@ -208,7 +208,9 @@ namespace neodataEcosystem.Rules
 					if (_raw_additional==null || _raw_additional == "") { _raw_additional = ""; }
 					if (_raw_additional != "")
 					{
-						if (_raw_additional.IndexOf(",") != -1) { _raw_additional = _raw_additional.Split(new char[] { '/' })[1]; }
+						if (_raw_additional.Contains("base64,")) { _raw_additional = _raw_additional.Split(",")[1]; }
+						if (_raw_additional.Contains("base64")) { _raw_additional = _raw_additional.Split("base64")[1]; }
+
 						_raw_additional = "data:" + _Helper.detectMimeTypeFromBase64(_raw_additional) + ";base64," + _raw_additional;
 						_data += "<img src='" + _raw_additional + "' style='width:100%;margin:0px;padding:0px;'/>";
 					}

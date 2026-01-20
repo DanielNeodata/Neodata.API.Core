@@ -36,6 +36,8 @@ namespace neodataEcosystem.Data
 				if (_params.Id_type_status == null) { _params.Id_type_status = 1; }
 
 				connection.Open();
+				if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
+				if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split("base64")[1]; }
 
 				#region Signing based in ID_application and Id_user, for search Profile
 				interOpSigningByProfile _objSign = new interOpSigningByProfile();
@@ -53,9 +55,6 @@ namespace neodataEcosystem.Data
 				_objSignAdditional = SignString(_objSignAdditional, false);
 				#endregion
 
-				#region Modify PDF if _params.Modifier is ok
-				_params.Raw_data = ModifyPDF(_params);
-				#endregion
 
 				#region Insert transfer!
 				SqlCommand cmd = new SqlCommand();
@@ -63,22 +62,22 @@ namespace neodataEcosystem.Data
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "INSERT INTO dbo.mod_transactions_transfers ";
 				cmd.CommandText += " (" + _DataContext.getCommonFields() + ",id_application,id_user,id_type_document,id_type_status,";
-				cmd.CommandText += " type_key,val_key,name_key,privateParty,publicParty,raw_data,mime_type,signature,privateKey,publicKey,integrity,verified_integrity, ";
+				cmd.CommandText += " type_key,val_key,name_key,privateParty,publicParty,mime_type,signature,privateKey,publicKey,integrity,verified_integrity, ";
 				cmd.CommandText += " raw_data_additional,mime_type_additional,signature_additional,privateKey_additional,publicKey_additional,integrity_additional,verified_integrity_additional, ";
 				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,id_profile) ";
 				cmd.CommandText += " VALUES ";
 				cmd.CommandText += " (" + _DataContext.getCommonFieldsValues("", "Neodata Digital Sign") + ",@ID_APPLICATION,@ID_USER,@ID_TYPE_DOCUMENT,@ID_TYPE_STATUS, ";
-				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY,@PRIVATEPARTY,@PUBLICPARTY,@RAW_DATA,@MIME_TYPE,@SIGNATURE,@PRIVATEKEY,@PUBLICKEY,1,getdate(), ";
+				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY,@PRIVATEPARTY,@PUBLICPARTY,@MIME_TYPE,@SIGNATURE,@PRIVATEKEY,@PUBLICKEY,1,getdate(), ";
 				cmd.CommandText += " @RAW_DATA_ADDITIONAL,@MIME_TYPE_ADDITIONAL,@SIGNATURE_ADDITIONAL,@PRIVATEKEY_ADDITIONAL,@PUBLICKEY_ADDITIONAL,1,GETDATE(), ";
 				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@ID_PROFILE) ";
 				cmd.CommandText += " ; SELECT SCOPE_IDENTITY()";
+
 
 				cmd.Parameters.Clear();
 				cmd.Parameters.AddWithValue("@ID_APPLICATION", _params.Id_application);
 				cmd.Parameters.AddWithValue("@ID_USER", _params.Id_user);
 				cmd.Parameters.AddWithValue("@ID_TYPE_DOCUMENT", _params.Id_type_document);
 				cmd.Parameters.AddWithValue("@ID_TYPE_STATUS", _params.Id_type_status);
-				cmd.Parameters.AddWithValue("@RAW_DATA", _params.Raw_data);
 				cmd.Parameters.AddWithValue("@MIME_TYPE", _params.Mime_type);
 				cmd.Parameters.AddWithValue("@EXTERNALID", _params.ExternalId);
 				cmd.Parameters.AddWithValue("@TYPE_KEY", _params.Type_key);
@@ -104,6 +103,20 @@ namespace neodataEcosystem.Data
 				cmd.Parameters.AddWithValue("@CUSTOM_MESSAGE", _params.Custom_message);
 
 				_response.Numeric = Convert.ToInt32(cmd.ExecuteScalar());
+
+				#region Modify PDF if _params.Modifier is ok
+				_params.Id = _response.Numeric;
+				_params.Raw_data = ModifyPDF(_params);
+				# endregion
+
+				cmd.CommandText = "UPDATE dbo.mod_transactions_transfers ";
+				cmd.CommandText += " SET raw_data=@RAW_DATA WHERE id=@ID;";
+
+				cmd.Parameters.Clear();
+				cmd.Parameters.AddWithValue("@ID", _response.Numeric); 
+				cmd.Parameters.AddWithValue("@RAW_DATA", _params.Raw_data);
+				cmd.ExecuteScalar();
+
 				if (_response.Numeric == 0) { throw new Exception("No id", new Exception("901.02")); }
 				#endregion
 
@@ -252,6 +265,7 @@ namespace neodataEcosystem.Data
 			settings.QRCodeECL = QRCodeECL.H;
 			string url = (_configServers.Servers["NeodataEcosystem"].url + "/neosignature.v1/Certificate?");
 			url += "id_application=" + _params.Id_application.ToString();
+			url += "&id=" + _params.Id.ToString();
 			url += "&id_user=" + _params.Id_user.ToString();
 			url += "&token=" + _Token.GenerateToken(_params.Id_user, "", _params.Id_application, -1, "neodataEcosystem.gruponeodata.com", "neodataEcosystem.gruponeodata.com");
 			string data2D = "Verificar QR";
@@ -323,7 +337,8 @@ namespace neodataEcosystem.Data
 					pdf.LoadFromStream(stream_pdf);
 
 					/*Open IMAGE to insert from base64 stream*/
-					if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
+					if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
+					if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split("base64")[1]; }
 
 					MemoryStream stream_image = new MemoryStream(Convert.FromBase64String(_params.Raw_data_additional));
 					PdfImage image = PdfImage.FromStream(stream_image);

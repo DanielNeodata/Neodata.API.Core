@@ -4,6 +4,7 @@ namespace neodataEcosystem.Interfaces
 {
 	public class inSignatures : inBaseAnyRequest
 	{
+		public int? Id { get; set; }
 		public int? Id_type_document { get; set; }
 		public int? Id_type_status { get; set; }
 		[Required] public string Raw_data { get; set; }
