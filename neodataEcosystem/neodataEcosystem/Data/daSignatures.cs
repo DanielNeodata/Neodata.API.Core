@@ -34,6 +34,7 @@ namespace neodataEcosystem.Data
 				if (_params.Custom_message == null) { _params.Custom_message = ""; }
 				if (_params.Id_type_document == null) { _params.Id_type_document = 1; }
 				if (_params.Id_type_status == null) { _params.Id_type_status = 1; }
+				if (_params.DateForced == null) { _params.DateForced = ""; }
 
 				connection.Open();
 				if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
@@ -64,14 +65,13 @@ namespace neodataEcosystem.Data
 				cmd.CommandText += " (" + _DataContext.getCommonFields() + ",id_application,id_user,id_type_document,id_type_status,";
 				cmd.CommandText += " type_key,val_key,name_key,privateParty,publicParty,mime_type,signature,privateKey,publicKey,integrity,verified_integrity, ";
 				cmd.CommandText += " raw_data_additional,mime_type_additional,signature_additional,privateKey_additional,publicKey_additional,integrity_additional,verified_integrity_additional, ";
-				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,id_profile) ";
+				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,id_profile,dateForced) ";
 				cmd.CommandText += " VALUES ";
 				cmd.CommandText += " (" + _DataContext.getCommonFieldsValues("", "Neodata Digital Sign") + ",@ID_APPLICATION,@ID_USER,@ID_TYPE_DOCUMENT,@ID_TYPE_STATUS, ";
 				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY,@PRIVATEPARTY,@PUBLICPARTY,@MIME_TYPE,@SIGNATURE,@PRIVATEKEY,@PUBLICKEY,1,getdate(), ";
 				cmd.CommandText += " @RAW_DATA_ADDITIONAL,@MIME_TYPE_ADDITIONAL,@SIGNATURE_ADDITIONAL,@PRIVATEKEY_ADDITIONAL,@PUBLICKEY_ADDITIONAL,1,GETDATE(), ";
-				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@ID_PROFILE) ";
+				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@ID_PROFILE,@DATEFORCED) ";
 				cmd.CommandText += " ; SELECT SCOPE_IDENTITY()";
-
 
 				cmd.Parameters.Clear();
 				cmd.Parameters.AddWithValue("@ID_APPLICATION", _params.Id_application);
@@ -101,6 +101,7 @@ namespace neodataEcosystem.Data
 				cmd.Parameters.AddWithValue("@SPEED", _params.Speed);
 				cmd.Parameters.AddWithValue("@REFERER", _params.Referer);
 				cmd.Parameters.AddWithValue("@CUSTOM_MESSAGE", _params.Custom_message);
+				cmd.Parameters.AddWithValue("@DATEFORCED", _params.DateForced);
 
 				_response.Numeric = Convert.ToInt32(cmd.ExecuteScalar());
 

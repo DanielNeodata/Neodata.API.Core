@@ -25,6 +25,8 @@ namespace neodataEcosystem.Interfaces
 		public int X { get; set; }
 		public int Y { get; set; }
 		public int PageToAlter { get; set; }
+		public string? DateForced { get; set; }
+
 	}
 	public class inSignaturesSearch : inBaseAnyRequest
 	{

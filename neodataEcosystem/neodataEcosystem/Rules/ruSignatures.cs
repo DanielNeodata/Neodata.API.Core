@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using SelectPdf;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Imaging;
 using System.Security.Cryptography.X509Certificates;
 
@@ -146,6 +147,18 @@ namespace neodataEcosystem.Rules
 					/*Build PDF Certificate*/
 					if (_response.Records.Count() == 0) { throw new Exception(""); }
 
+					string _fum = Convert.ToDateTime(_response.Records[0]["fum"]).ToString("dd/MM/yyyy");
+					string _verified = Convert.ToDateTime(_response.Records[0]["verified"]).ToString("dd/MM/yyyy HH:mm:ss");
+					string _now = DateTime.Now.ToString("dd/MM/yyyy");
+					string _verified_integrity = Convert.ToDateTime(_response.Records[0]["verified_integrity"]).ToString("dd/MM/yyyy");
+					if (_response.Records[0]["dateForced"].ToString()!="")
+					{
+						_fum = _response.Records[0]["dateForced"].ToString();
+						_verified = _fum;
+						 _now = _fum;
+						_verified_integrity = _fum;
+					}
+
 					System.Drawing.Image imageQrCode = _da.CreateQrCode(new inSignatures { Id=_params.Id, Id_application = _params.Id_application, Id_user = _params.Id_user });
 
 					ms = new MemoryStream();
@@ -169,7 +182,7 @@ namespace neodataEcosystem.Rules
 
 					_data += "<h3 style='padding:2px;margin:0px;background-color:rgb(0,155,219);color:white;width:100%;'>" + _lang["msg_10001"] + "</h3>";
 					_data += "<p style='font-size:12px;padding-left:10px;text-align:justify;'>";
-					_data += string.Format(_lang["msg_10002"], Convert.ToDateTime(_response.Records[0]["fum"]).ToString("dd/MM/yyyy"), _response.Records[0]["code"].ToString());
+					_data += string.Format(_lang["msg_10002"], _fum , _response.Records[0]["code"].ToString());
 					_data += "</p>";
 					string _ext = _response.Records[0]["mime_type"].ToString().Split(new char[] { '/' })[1];
 
@@ -179,7 +192,7 @@ namespace neodataEcosystem.Rules
 					_data += "         <b>" + _lang["msg_10003"] + " </b>" + _response.Records[0]["description"] + " - " + _response.Records[0]["description"] + " + " + _ext + "</td>";
 					_data += "      </li>";
 					_data += "      <li>";
-					_data += "         <b>" + _lang["msg_10004"] + " </b>" + Convert.ToDateTime(_response.Records[0]["verified"]).ToString("dd/MM/yyyy HH:mm:ss") + "</td>";
+					_data += "         <b>" + _lang["msg_10004"] + " </b>" + _verified + "</td>";
 					_data += "      </li>";
 					_data += "      <li>";
 					_data += "         <b>" + _lang["msg_10005"] + " </b>" + _response.Records[0]["code"].ToString() + " </td>";
@@ -261,8 +274,9 @@ namespace neodataEcosystem.Rules
                     */
 					_data += "   <h3 style='padding:2px;margin:0px;margin-top:5px;background-color:#b3cccc;color:black;width:100%;'>" + _lang["msg_10016"] + "</h3>";
 					_data += "   <ul>";
-					_data += "      <li><b>" + _lang["msg_10017"] + " </b>" + DateTime.Now.ToString("dd/MM/yyyy") + "</li>";
-					_data += "      <li><b>" + _lang["msg_10018"] + " </b>" + Convert.ToDateTime(_response.Records[0]["verified_integrity"]).ToString("dd/MM/yyyy") + "</li>";
+
+					_data += "      <li><b>" + _lang["msg_10017"] + " </b>" +_now + "</li>";
+					_data += "      <li><b>" + _lang["msg_10018"] + " </b>" + _verified_integrity + "</li>";
 					_data += "      <li><b>" + _lang["msg_2005"] + " </b>" + _response.Records[0]["lat"].ToString() + " </li>";
 					_data += "      <li><b>" + _lang["msg_2006"] + " </b>" + _response.Records[0]["lng"].ToString() + " </li>";
 					_data += "      <li><b>" + _lang["msg_2007"] + " </b>" + _response.Records[0]["altitude"].ToString() + " </li>";
