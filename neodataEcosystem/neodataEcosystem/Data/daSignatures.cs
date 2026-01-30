@@ -4,6 +4,7 @@ using Spire.Pdf.Graphics;
 using System.Drawing;
 using System.Security.Cryptography.Pkcs;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.Xml;
 using System.Text.RegularExpressions;
 
 namespace neodataEcosystem.Data
@@ -40,22 +41,6 @@ namespace neodataEcosystem.Data
 				if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
 				if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split("base64")[1]; }
 
-				#region Signing based in ID_application and Id_user, for search Profile
-				interOpSigningByProfile _objSign = new interOpSigningByProfile();
-				_objSign.Id_application = _params.Id_application;
-				_objSign.Id_user = _params.Id_user;
-				_objSign.DataToSign = _params.Raw_data;
-				_objSign.KeyDatabase = _DataContext.DefaultDatabase;
-				_objSign = SignString(_objSign,false);
-
-				interOpSigningByProfile _objSignAdditional = new interOpSigningByProfile();
-				_objSignAdditional.Id_application = _params.Id_application;
-				_objSignAdditional.Id_user = _params.Id_user;
-				_objSignAdditional.DataToSign = _params.Raw_data_additional;
-				_objSignAdditional.KeyDatabase = _DataContext.DefaultDatabase;
-				_objSignAdditional = SignString(_objSignAdditional, false);
-				#endregion
-
 
 				#region Insert transfer!
 				SqlCommand cmd = new SqlCommand();
@@ -63,14 +48,14 @@ namespace neodataEcosystem.Data
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "INSERT INTO dbo.mod_transactions_transfers ";
 				cmd.CommandText += " (" + _DataContext.getCommonFields() + ",id_application,id_user,id_type_document,id_type_status,";
-				cmd.CommandText += " type_key,val_key,name_key,privateParty,publicParty,mime_type,signature,privateKey,publicKey,integrity,verified_integrity, ";
-				cmd.CommandText += " raw_data_additional,mime_type_additional,signature_additional,privateKey_additional,publicKey_additional,integrity_additional,verified_integrity_additional, ";
-				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,id_profile,dateForced) ";
+				cmd.CommandText += " type_key,val_key,name_key,mime_type,integrity,verified_integrity, ";
+				cmd.CommandText += " raw_data_additional,mime_type_additional,integrity_additional,verified_integrity_additional, ";
+				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,dateForced) ";
 				cmd.CommandText += " VALUES ";
 				cmd.CommandText += " (" + _DataContext.getCommonFieldsValues("", "Neodata Digital Sign") + ",@ID_APPLICATION,@ID_USER,@ID_TYPE_DOCUMENT,@ID_TYPE_STATUS, ";
-				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY,@PRIVATEPARTY,@PUBLICPARTY,@MIME_TYPE,@SIGNATURE,@PRIVATEKEY,@PUBLICKEY,1,getdate(), ";
-				cmd.CommandText += " @RAW_DATA_ADDITIONAL,@MIME_TYPE_ADDITIONAL,@SIGNATURE_ADDITIONAL,@PRIVATEKEY_ADDITIONAL,@PUBLICKEY_ADDITIONAL,1,GETDATE(), ";
-				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@ID_PROFILE,@DATEFORCED) ";
+				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY@MIME_TYPE,1,getdate(), ";
+				cmd.CommandText += " @RAW_DATA_ADDITIONAL,@MIME_TYPE_ADDITIONAL,1,GETDATE(), ";
+				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@DATEFORCED) ";
 				cmd.CommandText += " ; SELECT SCOPE_IDENTITY()";
 
 				cmd.Parameters.Clear();
@@ -83,17 +68,8 @@ namespace neodataEcosystem.Data
 				cmd.Parameters.AddWithValue("@TYPE_KEY", _params.Type_key);
 				cmd.Parameters.AddWithValue("@VAL_KEY", _params.Val_key);
 				cmd.Parameters.AddWithValue("@NAME_KEY", _params.Name_key);
-				cmd.Parameters.AddWithValue("@PRIVATEPARTY", _objSign.PrivateParty);
-				cmd.Parameters.AddWithValue("@PUBLICPARTY", _objSign.PublicParty);
-				cmd.Parameters.AddWithValue("@SIGNATURE", _objSign.Signature);
-				cmd.Parameters.AddWithValue("@PRIVATEKEY", _objSign.PrivateKey);
-				cmd.Parameters.AddWithValue("@PUBLICKEY", _objSign.PublicKey);
-				cmd.Parameters.AddWithValue("@ID_PROFILE", _objSign.Id_Profile);
 				cmd.Parameters.AddWithValue("@RAW_DATA_ADDITIONAL", _params.Raw_data_additional);
 				cmd.Parameters.AddWithValue("@MIME_TYPE_ADDITIONAL", _params.Mime_type_additional);
-				cmd.Parameters.AddWithValue("@SIGNATURE_ADDITIONAL", _objSignAdditional.Signature);
-				cmd.Parameters.AddWithValue("@PRIVATEKEY_ADDITIONAL", _objSignAdditional.PrivateKey);
-				cmd.Parameters.AddWithValue("@PUBLICKEY_ADDITIONAL", _objSignAdditional.PublicKey);
 				cmd.Parameters.AddWithValue("@MODIFIER", _params.Modifier);
 				cmd.Parameters.AddWithValue("@LAT", _params.Lat);
 				cmd.Parameters.AddWithValue("@LNG", _params.Lng);
@@ -102,20 +78,57 @@ namespace neodataEcosystem.Data
 				cmd.Parameters.AddWithValue("@REFERER", _params.Referer);
 				cmd.Parameters.AddWithValue("@CUSTOM_MESSAGE", _params.Custom_message);
 				cmd.Parameters.AddWithValue("@DATEFORCED", _params.DateForced);
-
+				/*INSERTA CABECERA DEL REGISTRO DE FIRMA PARA OBTENER EL ID QUE SE USARA EN EL LINK DEL CERTIFICADO*/
 				_response.Numeric = Convert.ToInt32(cmd.ExecuteScalar());
 
+				/*MODIFICA EL PDF CONSIDERANDO EL ID OBTENIDO*/
 				#region Modify PDF if _params.Modifier is ok
 				_params.Id = _response.Numeric;
 				_params.Raw_data = ModifyPDF(_params);
-				# endregion
+				#endregion
 
-				cmd.CommandText = "UPDATE dbo.mod_transactions_transfers ";
-				cmd.CommandText += " SET raw_data=@RAW_DATA WHERE id=@ID;";
+				/*EFECTIVAMENTE FIRMA LOS DATOS CON LA FIRMA OLOGRAFA INSERTADA*/
+				#region Signing based in ID_application and Id_user, for search Profile
+				interOpSigningByProfile _objSign = new interOpSigningByProfile();
+				_objSign.Id_application = _params.Id_application;
+				_objSign.Id_user = _params.Id_user;
+				_objSign.DataToSign = _params.Raw_data;
+				_objSign.KeyDatabase = _DataContext.DefaultDatabase;
+				_objSign = SignString(_objSign, false);
+
+				interOpSigningByProfile _objSignAdditional = new interOpSigningByProfile();
+				_objSignAdditional.Id_application = _params.Id_application;
+				_objSignAdditional.Id_user = _params.Id_user;
+				_objSignAdditional.DataToSign = _params.Raw_data_additional;
+				_objSignAdditional.KeyDatabase = _DataContext.DefaultDatabase;
+				_objSignAdditional = SignString(_objSignAdditional, false);
+				#endregion
+
+				/*ACTUALIZA EL REGISTRO DE FIRMA SEGUN ID OBTENIDO, CON LOS DATOS DE LA FIRMA DIGITAL*/
+				cmd.CommandText = "UPDATE dbo.mod_transactions_transfers SET ";
+				cmd.CommandText += " raw_data=@RAW_DATA WHERE id=@ID,";
+				cmd.CommandText += " privateParty=@PRIVATEPARTY,";
+				cmd.CommandText += " publicParty=@PUBLICPARTY,";
+				cmd.CommandText += " signature=@SIGNATURE,";
+				cmd.CommandText += " privateKey=@PRIVATEKEY,";
+				cmd.CommandText += " publicKey=@PUBLICKEY,";
+				cmd.CommandText += " id_profile=@ID_PROFILE,";
+				cmd.CommandText += " signature_additional=@SIGNATURE_ADDITIONAL,";
+				cmd.CommandText += " privateKey_additional=@PRIVATEKEY_ADDITIONAL,";
+				cmd.CommandText += " publicKey_additional=@PUBLICKEY_ADDITIONAL";
 
 				cmd.Parameters.Clear();
 				cmd.Parameters.AddWithValue("@ID", _response.Numeric); 
 				cmd.Parameters.AddWithValue("@RAW_DATA", _params.Raw_data);
+				cmd.Parameters.AddWithValue("@PRIVATEPARTY", _objSign.PrivateParty);
+				cmd.Parameters.AddWithValue("@PUBLICPARTY", _objSign.PublicParty);
+				cmd.Parameters.AddWithValue("@SIGNATURE", _objSign.Signature);
+				cmd.Parameters.AddWithValue("@PRIVATEKEY", _objSign.PrivateKey);
+				cmd.Parameters.AddWithValue("@PUBLICKEY", _objSign.PublicKey);
+				cmd.Parameters.AddWithValue("@ID_PROFILE", _objSign.Id_Profile);
+				cmd.Parameters.AddWithValue("@SIGNATURE_ADDITIONAL", _objSignAdditional.Signature);
+				cmd.Parameters.AddWithValue("@PRIVATEKEY_ADDITIONAL", _objSignAdditional.PrivateKey);
+				cmd.Parameters.AddWithValue("@PUBLICKEY_ADDITIONAL", _objSignAdditional.PublicKey);
 				cmd.ExecuteScalar();
 
 				if (_response.Numeric == 0) { throw new Exception("No id", new Exception("901.02")); }
