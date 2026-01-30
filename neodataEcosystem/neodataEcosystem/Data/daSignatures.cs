@@ -41,7 +41,6 @@ namespace neodataEcosystem.Data
 				if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
 				if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split("base64")[1]; }
 
-			
 				#region Insert transfer!
 				SqlCommand cmd = new SqlCommand();
 				cmd.Connection = connection;
@@ -53,7 +52,7 @@ namespace neodataEcosystem.Data
 				cmd.CommandText += " privatized,destroyed,modifier,lat,lng,altitude,speed,referer,custom_message,externalid,dateForced) ";
 				cmd.CommandText += " VALUES ";
 				cmd.CommandText += " (" + _DataContext.getCommonFieldsValues("", "Neodata Digital Sign") + ",@ID_APPLICATION,@ID_USER,@ID_TYPE_DOCUMENT,@ID_TYPE_STATUS, ";
-				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY@MIME_TYPE,1,getdate(), ";
+				cmd.CommandText += " @TYPE_KEY,@VAL_KEY,@NAME_KEY,@MIME_TYPE,1,getdate(), ";
 				cmd.CommandText += " @RAW_DATA_ADDITIONAL,@MIME_TYPE_ADDITIONAL,1,GETDATE(), ";
 				cmd.CommandText += " null,null,@MODIFIER,@LAT,@LNG,@ALTITUDE,@SPEED,@REFERER,@CUSTOM_MESSAGE,@EXTERNALID,@DATEFORCED) ";
 				cmd.CommandText += " ; SELECT SCOPE_IDENTITY()";
