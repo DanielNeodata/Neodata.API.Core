@@ -41,7 +41,7 @@ namespace neodataEcosystem.Data
 				if (_params.Raw_data_additional.Contains("base64,")) { _params.Raw_data_additional = _params.Raw_data_additional.Split(",")[1]; }
 				if (_params.Raw_data_additional.Contains("base64")) { _params.Raw_data_additional = _params.Raw_data_additional.Split("base64")[1]; }
 
-
+			
 				#region Insert transfer!
 				SqlCommand cmd = new SqlCommand();
 				cmd.Connection = connection;
