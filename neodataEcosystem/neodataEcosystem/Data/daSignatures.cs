@@ -105,7 +105,7 @@ namespace neodataEcosystem.Data
 
 				/*ACTUALIZA EL REGISTRO DE FIRMA SEGUN ID OBTENIDO, CON LOS DATOS DE LA FIRMA DIGITAL*/
 				cmd.CommandText = "UPDATE dbo.mod_transactions_transfers SET ";
-				cmd.CommandText += " raw_data=@RAW_DATA WHERE id=@ID,";
+				cmd.CommandText += " raw_data=@RAW_DATA,";
 				cmd.CommandText += " privateParty=@PRIVATEPARTY,";
 				cmd.CommandText += " publicParty=@PUBLICPARTY,";
 				cmd.CommandText += " signature=@SIGNATURE,";
@@ -114,7 +114,8 @@ namespace neodataEcosystem.Data
 				cmd.CommandText += " id_profile=@ID_PROFILE,";
 				cmd.CommandText += " signature_additional=@SIGNATURE_ADDITIONAL,";
 				cmd.CommandText += " privateKey_additional=@PRIVATEKEY_ADDITIONAL,";
-				cmd.CommandText += " publicKey_additional=@PUBLICKEY_ADDITIONAL";
+				cmd.CommandText += " publicKey_additional=@PUBLICKEY_ADDITIONAL ";
+				cmd.CommandText += " WHERE id=@ID";
 
 				cmd.Parameters.Clear();
 				cmd.Parameters.AddWithValue("@ID", _response.Numeric); 
