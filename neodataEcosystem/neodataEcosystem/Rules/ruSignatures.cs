@@ -279,10 +279,10 @@ namespace neodataEcosystem.Rules
 					_data += "      <li><b>" + _lang["msg_10018"] + " </b>" + _verified_integrity + "</li>";
 					_data += "      <li><b>" + _lang["msg_2005"] + " </b>" + _response.Records[0]["lat"].ToString() + " </li>";
 					_data += "      <li><b>" + _lang["msg_2006"] + " </b>" + _response.Records[0]["lng"].ToString() + " </li>";
-					_data += "      <li><b>" + _lang["msg_2007"] + " </b>" + _response.Records[0]["altitude"].ToString() + " </li>";
-					_data += "      <li><b>" + _lang["msg_2008"] + " </b>" + _response.Records[0]["speed"].ToString() + " </li>";
-					_data += "      <li><b>" + _lang["msg_2009"] + " </b>" + _response.Records[0]["referer"].ToString() + " </li>";
-					_data += "      <li><b>" + _lang["msg_2010"] + " </b>" + _response.Records[0]["custom_message"].ToString() + " </li>";
+					//_data += "      <li><b>" + _lang["msg_2007"] + " </b>" + _response.Records[0]["altitude"].ToString() + " </li>";
+					//_data += "      <li><b>" + _lang["msg_2008"] + " </b>" + _response.Records[0]["speed"].ToString() + " </li>";
+					//_data += "      <li><b>" + _lang["msg_2009"] + " </b>" + _response.Records[0]["referer"].ToString() + " </li>";
+					//_data += "      <li><b>" + _lang["msg_2010"] + " </b>" + _response.Records[0]["custom_message"].ToString() + " </li>";
 					//_data += "      <li><b>" + _lang["msg_10019"] + " </b>" + _selfSign.Signature+ "</li>";
 					_data += "   </ul>";
 					_data += "   <h3 style='padding:2px;margin-top:10px;background-color:silver;color:black;width:100%;'>" + _lang["msg_10020"] + "</h3>";
