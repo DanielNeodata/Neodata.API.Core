@@ -101,7 +101,8 @@ namespace NeoAI
 			{
 				for (int j = 0; j < colLength; j++)
 				{
-					_response.Add(matrix[i, j]);
+					double _d = double.Parse(matrix[i, j].ToString());
+					_response.Add(_d);
 				}
 			}
 			return _response;

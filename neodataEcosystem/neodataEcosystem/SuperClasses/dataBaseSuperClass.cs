@@ -42,8 +42,10 @@
 			foreach (double row in dtResponse)
 			{
 				Dictionary<string, object> _record = new Dictionary<string, object>();
-				double _obj = Convert.ToDouble(row.ToString());
-				_record.Add("Double", _obj);
+				/*conversion*/
+				string s = Double.Parse(row.ToString()).ToString("F99").Substring(0,12);
+				double _d = Double.Parse(s);
+				_record.Add("Double", _d);
 				_table.Add(_record);
 			}
 			return _table;

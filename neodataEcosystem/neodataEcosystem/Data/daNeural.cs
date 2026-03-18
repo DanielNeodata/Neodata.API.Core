@@ -1,4 +1,5 @@
 ﻿using NeoAI;
+using System.Globalization;
 
 namespace neodataEcosystem.Data
 {
@@ -175,7 +176,6 @@ namespace neodataEcosystem.Data
 
 				/*Call to instance for resolve problem*/
 				_neoMind.ResolveProblem(_data_problem);
-
 				_response.Records = DoubleListToList(_neoMind._response);
 				_response.Logic = true;
 				_response.Numeric = 0;
@@ -308,11 +308,9 @@ namespace neodataEcosystem.Data
 					cmd.Connection = connection;
 					cmd.CommandType = CommandType.Text;
 					cmd.CommandText = "SELECT * FROM dbo.mod_neural_vw_questions WHERE id_project=@ID_PROJECT";
-					if (_params.Id_question != 0) { cmd.CommandText += " AND id=@ID_QUESTION"; }
 
 					cmd.Parameters.Clear();
 					cmd.Parameters.AddWithValue("@ID_PROJECT", _params.Id_project);
-					if (_params.Id_question != 0) { cmd.Parameters.AddWithValue("@ID_QUESTION", _params.Id_question); }
 
 					DataTable dtResponse = new DataTable();
 					dtResponse.Load(cmd.ExecuteReader());
